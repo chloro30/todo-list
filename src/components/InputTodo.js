@@ -24,7 +24,12 @@ export default function InputTodo({createInput, isClick, onInsert}) {
     return (
         <form className="InputTodo" onSubmit={onSubmit}>
             <input className={classn} type="text" onChange={onChange} value={value} placeholder="할 일을 입력 후 Enter를 누르세요." />
-            <button className={classn} type="button" onClick={() => createInput()}><span>+</span></button>
+            <button className={classn} type="button" onClick={() => createInput()}>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
         </form>
     );
 }
