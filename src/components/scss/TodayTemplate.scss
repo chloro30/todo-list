@@ -1,0 +1,49 @@
+.TodayTemplate {
+    background-color: rgb(248, 248, 248);
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 6rem;
+    
+    position: relative; //input태그 - absolute의 기준
+    
+}
+
+
+
+
+/* 디바이스 width의 크기가 500px 미만 일때 */
+@media screen and (max-width: 499px) {
+    .TodayTemplate {
+        // background-color: aquamarine;
+        width: 300px;
+        .content {
+            .TodayTitle {
+                .rest {
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .Todolist {
+                .item {
+                    > span.text {
+                        font-size: 12px;
+                        padding: 4px 0 0 0;
+                    }
+                }
+            }
+            .AddTodo {
+                form {
+                    input {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// #root > div > div > div > div.Todolist > div.item.done > span.text
